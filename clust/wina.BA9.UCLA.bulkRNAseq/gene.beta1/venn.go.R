@@ -14,7 +14,7 @@ setwd("C:/Users/Marjan Ilkov/OneDrive - The Mount Sinai Hospital/Desktop/MSSM/20
 wkdir = getwd()
 
 pval_cutoff = 0.05 # The cutoff value for the pvalue we want to use
-FC.cutoff = 1.5
+FC.cutoff = 1.3
 # Read the differential expression data
 deg = readRDS("C:/Users/Marjan Ilkov/OneDrive - The Mount Sinai Hospital/Desktop/MSSM/2025/20250505_asd/clust/wina.BA9.UCLA.bulkRNAseq/gene.beta1/DLPFCUCLA.b1.DEP.RDS")
 degList = DEGmachine(deg, FC.cutoff = FC.cutoff, p.val.cutoff = pval_cutoff) 
