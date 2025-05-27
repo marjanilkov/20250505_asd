@@ -11,19 +11,19 @@ source("C:/Users/Marjan Ilkov/OneDrive - The Mount Sinai Hospital/Desktop/MSSM/s
 # We will load the marjanRfunctions.R set of functions directly from github from now on
 devtools::source_url("https://raw.githubusercontent.com/marjanilkov/sinaiRepo/refs/heads/main/marjanRfunctions.R")
 
-setwd("C:/Users/Marjan Ilkov/OneDrive - The Mount Sinai Hospital/Desktop/MSSM/2025/20250415_scz/sample.heatmap/")
+setwd("C:/Users/Marjan Ilkov/OneDrive - The Mount Sinai Hospital/Desktop/MSSM/2025/20250505_asd/sample.heatmap/")
 wkdir = getwd()
 
 pval_cutoff = 0.05 # The cutoff value for the pvalue we want to use
-FC.cutoff = 1.1
+FC.cutoff = 1.2
 # Read the gene data
-h1row = readRDS("C:/Users/Marjan Ilkov/OneDrive - The Mount Sinai Hospital/Desktop/MSSM/2025/20250415_scz/sample.heatmap/gene_average/h1row.complete.RDS")
+h1row = readRDS("C:/Users/Marjan Ilkov/OneDrive - The Mount Sinai Hospital/Desktop/MSSM/2025/20250505_asd/sample.heatmap/gene_average/h1row.complete1.RDS")
 
 gene_order = h1row
 #plot(gene_order)
 mydeepSplit       = FALSE# fine structure within module
 myminModuleSize   = 3 # modules must have this minimum number of genes
-myheightcutoff = 0.75
+myheightcutoff = 0.85
 mcolcode2= cutTreeStatic(hiercluster=h1row, heightcutoff=myheightcutoff, minsize1=myminModuleSize)
 #
 colcode.reduced  = reassignModuleNames(mcolcode2, 
